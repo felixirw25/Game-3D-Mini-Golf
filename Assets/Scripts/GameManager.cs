@@ -25,10 +25,20 @@ public class GameManager : MonoBehaviour
             gameCanvas.SetActive(true);
         }
     }
+    private void Awake(){
+        Debug.Log("Max Level di Awake: " + PlayerPrefs.GetInt("maxlevel"));
+    }    
     private void Start()
     {
         Time.timeScale = 1;
-        PlayerPrefs.GetInt("maxlevel", 1);
+        Debug.Log("Max Level di Start: " + PlayerPrefs.GetInt("maxlevel"));
+        if(PlayerPrefs.GetInt("maxlevel")<=0){
+            PlayerPrefs.SetInt("maxlevel", 1);
+        }
+        else{
+            PlayerPrefs.GetInt("maxlevel", 1);
+        }
+        
         if(gameOverPanel==null || gameOvertext==null || playerController==null || hole==null || pausePanel==null)
             return;
         
