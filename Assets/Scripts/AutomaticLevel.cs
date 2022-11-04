@@ -8,10 +8,7 @@ public class AutomaticLevel : MonoBehaviour
     [SerializeField] public LevelData[] listLevels;
     [SerializeField] GameObject levelPrefab;
     [SerializeField] Transform parent;
-    // [SerializeField] public Sprite lockSprite;
-    // [SerializeField] public SpriteRenderer spriteRenderer;
-    // level yang ada
-    // scenes (nama), preview image (sprite), nama level (scene), terbuka/terkunci, sudah ada/blm
+    
     [System.Serializable]
     public class LevelData{
         [SerializeField] public string levelName;
@@ -41,6 +38,3 @@ public class AutomaticLevel : MonoBehaviour
         }
     }
 }
-// kalau dia isUnlock == false berarti engga bisa dipencet
-
-// tambah 1 level
